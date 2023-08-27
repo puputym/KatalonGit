@@ -19,5 +19,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('https://www.saucedemo.com/v1/')
 
+WebUI.setText(findTestObject('Login/Page_Swag Labs/input_standard_userlocked_out_userproblem_userperformance_glitch_user_user-name'), 
+    'standard_user')
+
+WebUI.setText(findTestObject('Login/Page_Swag Labs/input_standard_userlocked_out_userproblem_userperformance_glitch_user_password'), 
+    'secret_sauce')
+
+WebUI.click(findTestObject('Login/Page_Swag Labs/input_standard_userlocked_out_userproblem_userperformance_glitch_user_login-button'))
+
+WebUI.verifyElementPresent(findTestObject('Login/Page_Swag Labs/div_Products'), 0)
+
 WebUI.closeBrowser()
 
